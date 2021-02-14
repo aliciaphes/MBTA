@@ -1,18 +1,10 @@
-import React from 'react';
-import { DateUI } from './ui';
+import React, { useState } from "react";
+import { DateUI } from "./ui";
 
-class DateContainer extends React.Component {
+function DateContainer() {
+  const [currentDate] = useState(new Date());
 
-  constructor(props) {
-    super(props);
-    this.state = {currentDate: new Date()};
-  }
-
-
-  render() {
-    const {currentDate} = this.state;
-    return <DateUI currentDate={currentDate}/>;
-  }
+  return <DateUI currentDate={currentDate} />;
 }
 
 export const DateBlock = DateContainer;

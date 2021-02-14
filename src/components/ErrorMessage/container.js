@@ -1,18 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {ErrorMessageUI} from './ui';
+import React from "react";
+import { ErrorMessageUI } from "./ui";
 
+function ErrorMessageContainer(props) {
+  const { errorMessage } = props;
 
-class ErrorMessageContainer extends React.Component {
-
-  static propTypes = {
-      errorMessage: PropTypes.string
-  };
-
-  render() {
-    const {errorMessage} = this.props;
-    return <ErrorMessageUI errorMessage={errorMessage}/>;
-  }
+  return <ErrorMessageUI errorMessage={errorMessage} />;
 }
 
 export const ErrorMessage = ErrorMessageContainer;
